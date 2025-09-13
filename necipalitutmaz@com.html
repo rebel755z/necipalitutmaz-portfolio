@@ -12,112 +12,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0f14; /* ana arka plan */
-      --bg-alt:#0f141b; /* kart arka plan */
-      --text:#e6edf3; /* ana metin */
-      --muted:#9fb0c0; /* ikincil metin */
-      --brand:#7aa2f7; /* vurgu */
-      --accent:#2dd4bf; /* ikinci vurgu */
-      --border:rgba(255,255,255,0.08);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
-      --radius-lg:22px;
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; 
-      background:radial-gradient(1200px 800px at 10% -10%, rgba(122,162,247,.15), transparent 60%),
-                 radial-gradient(1000px 700px at 120% -20%, rgba(45,212,191,.12), transparent 55%),
-                 var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      letter-spacing:.1px;
-    }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:var(--maxw); margin-inline:auto; padding:0 20px}
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px);
-      background:rgba(11,15,20,.6); border-bottom:1px solid var(--border);
-    }
-    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.5px}
-    .brand .logo{width:34px; height:34px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--accent)); box-shadow:var(--shadow)}
-    .nav a{color:var(--text); opacity:.9}
-    .nav-links{display:flex; gap:18px; align-items:center}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid var(--border); border-radius:12px; background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)); box-shadow:var(--shadow)}
-    .btn:hover{transform:translateY(-1px)}
-    .hero{padding:80px 0 40px}
-    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:var(--muted);
-      background:rgba(122,162,247,.08)
-    }
-    h1{font-size:clamp(28px,5vw,48px); line-height:1.1; margin:14px 0 10px}
-    .lead{font-size:clamp(15px,2.2vw,18px); color:var(--muted); margin:0 0 18px}
-    .cta{display:flex; gap:12px; flex-wrap:wrap}
-    .cta .primary{background:linear-gradient(135deg,var(--brand),var(--accent)); color:#061014; border:none; font-weight:700}
-    .card{border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)); box-shadow:var(--shadow)}
-    .avatar{aspect-ratio:1/1; width:100%; max-width:280px; border-radius:var(--radius-lg); object-fit:cover; border:1px solid var(--border)}
-    section{padding:36px 0}
-    .section-title{display:flex; align-items:end; justify-content:space-between; margin-bottom:16px}
-    h2{font-size:clamp(22px,3.5vw,30px); margin:0}
-    .muted{color:var(--muted)}
-    .grid{display:grid; gap:16px}
-    .grid.projects{grid-template-columns:repeat(3,1fr)}
-    .grid.posts{grid-template-columns:repeat(2,1fr)}
-    .project,.post{padding:16px}
-    .project h3,.post h3{margin:8px 0 8px; font-size:18px}
-    .meta{font-size:13px; color:var(--muted)}
-    .tag{font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
-    .tags{display:flex; flex-wrap:wrap; gap:6px}
-    .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
-    .about{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    .list{display:grid; gap:8px}
-    .list li{display:flex; gap:10px; align-items:flex-start}
-    .list li span{margin-top:2px}
-    .contact-card{display:grid; gap:10px; padding:18px}
-    .contact-actions{display:flex; gap:10px; flex-wrap:wrap}
-    .footer{padding:26px 0 40px; color:var(--muted); border-top:1px solid var(--border); margin-top:24px}
-    .social{display:flex; gap:12px}
-    .social a{padding:6px 10px; border:1px solid var(--border); border-radius:10px}
-    /* Responsive */
-    @media (max-width:1000px){
-      .hero-grid{grid-template-columns:1fr; text-align:center}
-      .avatar{margin:0 auto}
-    }
-    @media (max-width:900px){
-      .grid.projects{grid-template-columns:1fr 1fr}
-      .grid.posts{grid-template-columns:1fr}
-      .about{grid-template-columns:1fr}
-    }
-    @media (max-width:520px){
-      .nav-links{display:none}
-    }
-    /* Scrool için bölüm */
-    html{scroll-behavior:smooth}
-    /* stil tarafı */
-    :focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Ana sayfaya dön">
-        <span class="logo">A</span>
-        <span>Ali</span>
+        <span class="logo">N</span>
+        <span>Necip Ali </span>
       </a>
       <nav class="nav-links" aria-label="Birincil">
-        <a href="#hakkimda">Hakkımda</a>
-        <a href="#projeler">Projeler</a>
-        <a href="#yazilar">Yazılar</a>
-        <a href="#sertifikalar">Sertifikalar</a>
-        <a href="#iletisim">İletişim</a>
-        <a class="btn" href="./CV-(NecipAliTUTMAZ).pdf" download rel="nofollow">CV İndir</a>
+        <a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+        <a href="#projeler" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="#yazilar" data-tr="Yazılar" data-en="Posts">Yazılar</a>
+        <a href="#sertifikalar" data-tr="Sertifikalar" data-en="Certificates">Sertifikalar</a>
+        <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+        <button class="lang-switch btn">EN</button>
+        <a class="btn" href="./CV-(NecipAliTUTMAZ).pdf" download rel="nofollow" data-tr="CV İndir" data-en="Download CV ">CV İndir</a>
       </nav>
     </div>
   </header>
@@ -126,9 +38,14 @@
     <section class="hero container">
       <div class="hero-grid">
         <div>
-          <span class="pill kicker">Kişisel Site</span>
+          <span class="pill kicker">Kişisel Web Sitesi</span>
           <h1>Merhaba, ben Necip Ali TUTMAZ. <span style="color:var(--brand)">Yazılım</span> ve <span style="color:var(--accent)">donanım</span> projeleri üretiyorum.</h1>
-          <p class="lead">Web geliştirme, gömülü sistemler ve yapay zekâ ile ilgileniyorum. Aşağıda seçtiğim projeleri ve yazıları bulabilirsiniz.</p>
+          <p class="lead">Son on yılı aşkın süredir bilişim ve haberleşme sistemleri alanında kapsamlı bir deneyim edindim.
+             İnternet, intranet ve haberleşme sistemlerinin kurulumu gibi farklı projelerde yer almam, teknik becerilerimi geliştirmemin yanı sıra saha çalışmalarında karşılaşılan zorluklara etkin ve hızlı çözümler üretme yetkinliği kazandırdı.
+            </p> 
+          <p class="lead">Halihazırda başarılı bir kariyer sürdürmekteyim; ancak vizyonumu genişletmek adına uluslararası organizasyonlarda daha aktif rol almayı hedefliyorum. 
+            Bu alanın, hem birikimimi daha geniş ölçekte katkıya dönüştürmek hem de kariyerime daha tatmin edici ve anlamlı bir yön vermek için doğru bir platform olduğuna inanıyorum.
+          </p>
           <div class="cta">
             <a class="btn primary" href="#projeler">Projeleri Gör</a>
             <a class="btn" href="#iletisim">İletişime Geç</a>
@@ -147,27 +64,29 @@
       </div>
       <div class="about">
         <div class="card" style="padding:18px">
-          <p>
-            33 yaşında bir geliştiriciyim. Raspberry Pi ile donanım projeleri, HTML/CSS/JS ile web arayüzleri geliştiriyorum. 
-            Amaç: sade, hızlı ve erişilebilir ürünler yapmak.
-          </p>
-          <ul class="list">
-            <li><span>🧰</span> <div><strong>Teknolojiler:</strong> HTML, CSS, JavaScript, Python, Raspberry Pi, NFC, Sensörler</div></li>
-            <li><span>⚡</span> <div><strong>İlgi Alanları:</strong> Edge AI, IoT, görsel tasarım</div></li>
-            <li><span>📍</span> <div><strong>Konum:</strong> İstanbul, Türkiye</div></li>
-          </ul>
-        </div>
+            <p>
+              33 yaşında bir geliştiriciyim. Raspberry Pi ile donanım projeleri, HTML/CSS/JS ile web arayüzleri geliştiriyorum. 
+              Uzun süredir telsiz ve dijital haberleşme sistemleriyle de çalışıyorum. 
+              Amaç: sade, hızlı ve erişilebilir ürünler yapmak.
+            </p>
+            <ul class="list">
+              <li><span>🧰</span> <div><strong>Teknolojiler:</strong> HTML, Python, Raspberry Pi, NFC, Sensörler, Haberleşme Sistemleri</div></li>
+              <li><span>⚡</span> <div><strong>İlgi Alanları:</strong> Edge AI, IoT, Haberleşme Sistemleri</div></li>
+              <li><span>📍</span> <div><strong>Konum:</strong> Ankara, Türkiye</div></li>
+            </ul>
+        </div>  
+
         <div class="card" style="padding:18px">
-          <h3 style="margin:6px 0 8px">Öne Çıkanlar</h3>
+          <h3 style="margin:6px 0 8px">Eğitimler</h3>
           <ul class="list">
-            <li><span>✅</span> <div>Alkol ölçüm cihazı için NFC tabanlı arayüz prototipi</div></li>
-            <li><span>✅</span> <div>Basit ve hızlı kişisel site şablonu (bu sayfa)</div></li>
-            <li><span>✅</span> <div>Veri görselleştirme için minimalist bileşenler</div></li>
+            <li><span>✅</span> <div>Siber Güvenlik Yüksek Lisans Derecesi</div></li>
+            <li><span>✅</span> <div>Yönetim Bilişim Sistemleri Lisans Derecesi (Devam Ediyor)</div></li>
+            <li><span>✅</span> <div>Maliye Lisans Derecesi</div></li>
+            <li><span>✅</span> <div>Web Tasarım ve Kodlama Ön Lisans Derecesi</div></li>
+            <li><span>✅</span> <div>Bilgisayar Programcılığı Ön Lisans Derecesi</div></li>
+
           </ul>
           <div class="tags" style="margin-top:10px">
-            <span class="tag">Erişilebilir</span>
-            <span class="tag">Hızlı</span>
-            <span class="tag">Koyu Tema</span>
           </div>
         </div>
       </div>
@@ -207,14 +126,14 @@
       </div>
       <div class="grid posts">
         <article class="post card">
-          <h3>Statik HTML ile Hızlı Site</h3>
-          <p class="muted">Frameworksüz, tek dosyada modern ve hızlı bir kişisel site nasıl yapılır?</p>
-          <div class="meta">3 Eylül 2025 • 4 dk</div>
+          <h3>Zararlı Yazılımların İncelenmesi ve Analizi</h3>
+          <p class="muted">Artan yapay zeka kullanımı ile birlikte zararlı yazılımların da evrildiği bir dönemdeyiz. Bu yazıda, zararlı yazılımların nasıl çalıştığını ve bunlara karşı nasıl önlemler alabileceğimizi inceleyeceğiz.</p>
+          <div class="meta">TUTMAZ, Necip Ali, 2021 Yüksek Lisans Tezi, Ahmet Yesevi Üniversitesi, Siber Güvenlik</div>
         </article>
         <article class="post card">
-          <h3>Raspberry Pi ile Sensör Okuma İpuçları</h3>
-          <p class="muted">MQ-3 ve DHT sensörleriyle pratik deneyimler.</p>
-          <div class="meta">20 Ağustos 2025 • 6 dk</div>
+          <h3>KATES: Kamu Telsiz Haberleşme Sistemi</h3>
+          <p class="muted">Telsiz haberleşme sistemlerinin maliyetlerinin artması ve kamu güvenliğinin ortak sorun olması gibi sorulara karşılık geliştirilen kamu kurumlarında ortak bir haberleşme sistemi KATES sistemi nedir?</p>
+          <div class="meta">TUTMAZ, Necip Ali / SARILIOĞLU, Bülent / CAN, Osman Yıl 2023, Polis Dergisi Sf. 44-45 </div>
         </article>
       </div>
     </section>
@@ -222,19 +141,71 @@
     <section id="sertifikalar" class="container">
       <div class="section-title">
         <h2>Sertifikalar</h2>
-        <a class="muted" href="#">Tüm yazılar →</a>
+        <button class="muted show-more-btn" id="showMoreCerts">Tüm Sertifikalar →</button>
       </div>
       <div class="grid posts">
         <article class="post card">
-          <h3> Yüksekte Çalışma Eğitimci Eğitimi </h3>
-          <p class="muted">Yüksekte çalışma büyük bir sorun iken eğitimsiz olmak daha büyük sorun değil mi? </p>
-          <div class="meta">3 Eylül 2025 • 4 dk</div>
+          <h3> İletişim Sistemleri (Usta Öğretici) </h3>
+          <p class="muted">Bu sertifika, ustalık belgesi aldığım alanlarda eğitim verebileceğimi göstermektedir.</p>
+          <div class="meta">05/07/2023 – 05/07/2023 | Ankara, TÜRKİYE</div>
+        </article>
+
+        <article class="post card">
+            <h3> C+ Seviye İngilizce Eğitimi (Sertifika) </h3>
+           <p class="muted">C+ Upper Intermediate İngilizce programını başarıyla tamamladığım için verilmiştir.</p>
+            <div class="meta">17/02/2023 – 17/03/2023 | Ankara, TÜRKİYE</div>
+        </article>
+        
+      <article class="post card hidden-cert">
+
+        <article class="post card">
+          <h3> Ağ Uzmanlığı (Sertifika) </h3>
+          <p class="muted">Temel ağ becerileri programını başarıyla tamamladığım için verilmiştir.</p>
+          <div class="meta">15/03/2023 – 15/03/2023 | Ankara, TÜRKİYE</div>
         </article>
         <article class="post card">
-          <h3>Temel Ağ Güvenliği</h3>
-          <p class="muted">MQ-3 ve DHT sensörleriyle pratik deneyimler.</p>
-          <div class="meta">20 Ağustos 2025 • 6 dk</div>
+          <h3> İletişim Sistemleri (Yeterlilik Sertifikası) </h3>
+          <p class="muted">İletişim sistemleri programını başarıyla tamamladığım için verilmiştir.</p>
+          <div class="meta">29/12/2022 – 29/12/2022 | Ankara, TÜRKİYE</div>
         </article>
+        <article class="post card">
+          <h3> HTML5 ile Web Tasarımı (Sertifika) </h3>
+          <p class="muted">HTML5 ile web tasarımı ve geliştirme konusunda yetkinlik kazandırmaktadır.</p>
+          <div class="meta">25/10/2022 – 25/10/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> Yüksekte Çalışma Eğitici Eğitimi (Sertifika) </h3>
+          <p class="muted">Yüksekte çalışanlara eğitim verebilmek amacıyla düzenlenmiştir.</p>
+          <div class="meta">19/09/2022 – 23/09/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> TÜBİTAK Radiolink Cihazları Kullanım, Bakım ve Onarım Eğitimi (Sertifika) </h3>
+          <p class="muted">TÜBİTAK markalı radiolink cihazlarının kullanımı ve onarımı için verilmiştir.</p>
+          <div class="meta">13/06/2022 – 24/06/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> Sayısal Radyo Sistemleri Kullanıcı ve Operatör Eğitimi (Sertifika) </h3>
+          <p class="muted">ASELSAN sayısal radyo sistemlerinin kullanımı ve onarımı için verilmiştir.</p>
+          <div class="meta">13/06/2022 – 24/06/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> Sayısal Radyo Sistemleri Bakım ve Onarım Eğitimi (Sertifika) </h3>
+          <p class="muted">ASELSAN sayısal radyo sistemlerinin bakım ve onarımı için verilmiştir.</p>
+          <div class="meta">13/06/2022 – 24/06/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> Sayısal Radyo El, Araç ve Röle Bakım-Onarım Eğitimi (Sertifika) </h3>
+          <p class="muted">ASELSAN sayısal radyo el cihazları, araç cihazları ve röle sistemlerinin bakım ve onarımı için verilmiştir.</p>
+          <div class="meta">13/05/2022 – 24/06/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        <article class="post card">
+          <h3> NEC Radiolink Cihazları Kullanım, Bakım ve Onarım Eğitimi (Sertifika) </h3>
+          <p class="muted">NEC markalı radiolink cihazlarının kullanımı ve onarımı için verilmiştir.</p>
+          <div class="meta">13/05/2022 – 24/06/2022 | Ankara, TÜRKİYE</div>
+        </article>
+        
+       </article>
+
       </div>
     </section>
 
@@ -247,39 +218,20 @@
         <p class="muted">Aşağıdaki seçenekler ile bana ulaşabilirsin. </p>
         <div class="contact-actions">
           <a class="btn primary" href="mailto:alitutmaz@hotmail.com">E‑posta Gönder</a>
-          <a class="btn" href="https://github.com/" target="rebel755z" rel="https://github.com/rebel755z">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="alitutmaz" rel="https://www.linkedin.com/in/necip-ali-tutmaz-a45aa0213/">LinkedIn</a>
+          <a class="btn" href="https://github.com/rebel755z" target="rebel755z" rel="https://github.com/rebel755z">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/necip-ali-tutmaz-a45aa0213/" target="alitutmaz" rel="https://www.linkedin.com/in/necip-ali-tutmaz-a45aa0213/">LinkedIn</a>
         </div>
       </div>
     </section>
+
+    
   </main>
 
   <footer class="footer">
     <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
       <div>© <span id="yil"></span> Necip Ali TUTMAZ. Tüm hakları saklıdır.</div>
-      <div class="social">
-        <a aria-label="GitHub" href="#">GitHub</a>
-        <a aria-label="LinkedIn" href="#">LinkedIn</a>
-        <a aria-label="X" href="#">X</a>
-      </div>
     </div>
   </footer>
-
-  <script>
-    // Yıl otomatik
-    document.getElementById('yil').textContent = new Date().getFullYear();
-
-    // Kartlara küçük hover efekti
-    for (const el of document.querySelectorAll('.card')){
-      el.addEventListener('mousemove', (e)=>{
-        const r = el.getBoundingClientRect();
-        const x = e.clientX - r.left; const y = e.clientY - r.top;
-        el.style.background = `radial-gradient(300px 200px at ${x}px ${y}px, rgba(122,162,247,.08), rgba(255,255,255,.01))`;
-      });
-      el.addEventListener('mouseleave', ()=>{
-        el.style.background = 'linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))';
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
